@@ -1,9 +1,7 @@
 #!bin/bash
 
 echo ==========================================
-echo ***Running all tests on data structures***
+echo ***Running all exercises of Chapter 1***
 echo ==========================================
 
-./TestLinkedList
-./TestHashTable
-./TestArrayList
+./Ex1
