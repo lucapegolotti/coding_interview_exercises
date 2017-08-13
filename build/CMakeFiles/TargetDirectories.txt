@@ -6,3 +6,7 @@
 /Users/luca/Documents/cracking_the_coding_interview/build/data_structures/tests/CMakeFiles/rebuild_cache.dir
 /Users/luca/Documents/cracking_the_coding_interview/build/data_structures/tests/CMakeFiles/edit_cache.dir
 /Users/luca/Documents/cracking_the_coding_interview/build/data_structures/tests/CMakeFiles/TestHashTable.dir
+/Users/luca/Documents/cracking_the_coding_interview/build/tools/CMakeFiles/rebuild_cache.dir
+/Users/luca/Documents/cracking_the_coding_interview/build/tools/CMakeFiles/edit_cache.dir
+/Users/luca/Documents/cracking_the_coding_interview/build/tools/tests_framework/CMakeFiles/rebuild_cache.dir
+/Users/luca/Documents/cracking_the_coding_interview/build/tools/tests_framework/CMakeFiles/edit_cache.dir

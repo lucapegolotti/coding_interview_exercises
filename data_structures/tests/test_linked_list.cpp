@@ -1,30 +1,31 @@
 #include <iostream>
 #include <string>
 
+#include <test.hpp>
 #include "../linked_list/linked_list.hpp"
 
-unsigned int n_tests;
-
-
-bool test1()
+void subTest1(Test& test)
 {
-  std::cout << "Test 1 ..." << std::endl;
   LinkedList<int> list;
-  n_tests++;
-
-  return list.getSize() == 0;
+  test.assert(list.getSize() == 0);
 }
+
+void subTest2(Test& test)
+{
+  LinkedList<int> list;
+  list.add(1);
+  test.assert(list.getSize() == 1);
+}
+
 
 int main()
 {
-  unsigned int passed_tests = 0;
-  std::cout << "Linked List test:\n----------------------------" << std::endl;
-  n_tests = 0;
+  Test test("LinkedListTest");
 
-  passed_tests += test1();
+  test.addSubTest(*subTest1);
+  test.addSubTest(*subTest2);
 
-
-  std::cout << "Successful tests = " << passed_tests << "/" << n_tests << std::endl;
+  test.run();
 
   return 0;
 }

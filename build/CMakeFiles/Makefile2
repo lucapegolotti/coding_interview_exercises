@@ -104,7 +104,7 @@ data_structures/tests/preinstall:
 data_structures/tests/CMakeFiles/TestLinkedList.dir/all:
 	$(MAKE) -f data_structures/tests/CMakeFiles/TestLinkedList.dir/build.make data_structures/tests/CMakeFiles/TestLinkedList.dir/depend
 	$(MAKE) -f data_structures/tests/CMakeFiles/TestLinkedList.dir/build.make data_structures/tests/CMakeFiles/TestLinkedList.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/luca/Documents/cracking_the_coding_interview/build/CMakeFiles --progress-num=3,4 "Built target TestLinkedList"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/luca/Documents/cracking_the_coding_interview/build/CMakeFiles --progress-num=4,5,6 "Built target TestLinkedList"
 .PHONY : data_structures/tests/CMakeFiles/TestLinkedList.dir/all
 
 # Include target in all.
@@ -114,7 +114,7 @@ all: data_structures/tests/CMakeFiles/TestLinkedList.dir/all
 
 # Build rule for subdir invocation for target.
 data_structures/tests/CMakeFiles/TestLinkedList.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/luca/Documents/cracking_the_coding_interview/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/luca/Documents/cracking_the_coding_interview/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 data_structures/tests/CMakeFiles/TestLinkedList.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/luca/Documents/cracking_the_coding_interview/build/CMakeFiles 0
 .PHONY : data_structures/tests/CMakeFiles/TestLinkedList.dir/rule
@@ -141,7 +141,7 @@ clean: data_structures/tests/CMakeFiles/TestLinkedList.dir/clean
 data_structures/tests/CMakeFiles/TestHashTable.dir/all:
 	$(MAKE) -f data_structures/tests/CMakeFiles/TestHashTable.dir/build.make data_structures/tests/CMakeFiles/TestHashTable.dir/depend
 	$(MAKE) -f data_structures/tests/CMakeFiles/TestHashTable.dir/build.make data_structures/tests/CMakeFiles/TestHashTable.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/luca/Documents/cracking_the_coding_interview/build/CMakeFiles --progress-num=1,2 "Built target TestHashTable"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/luca/Documents/cracking_the_coding_interview/build/CMakeFiles --progress-num=1,2,3 "Built target TestHashTable"
 .PHONY : data_structures/tests/CMakeFiles/TestHashTable.dir/all
 
 # Include target in all.
@@ -151,7 +151,7 @@ all: data_structures/tests/CMakeFiles/TestHashTable.dir/all
 
 # Build rule for subdir invocation for target.
 data_structures/tests/CMakeFiles/TestHashTable.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/luca/Documents/cracking_the_coding_interview/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/luca/Documents/cracking_the_coding_interview/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 data_structures/tests/CMakeFiles/TestHashTable.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/luca/Documents/cracking_the_coding_interview/build/CMakeFiles 0
 .PHONY : data_structures/tests/CMakeFiles/TestHashTable.dir/rule
@@ -170,6 +170,42 @@ data_structures/tests/CMakeFiles/TestHashTable.dir/clean:
 clean: data_structures/tests/CMakeFiles/TestHashTable.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory tools
+
+# Convenience name for "all" pass in the directory.
+tools/all: tools/tests_framework/all
+
+.PHONY : tools/all
+
+# Convenience name for "clean" pass in the directory.
+tools/clean: tools/tests_framework/clean
+
+.PHONY : tools/clean
+
+# Convenience name for "preinstall" pass in the directory.
+tools/preinstall: tools/tests_framework/preinstall
+
+.PHONY : tools/preinstall
+
+#=============================================================================
+# Directory level rules for directory tools/tests_framework
+
+# Convenience name for "all" pass in the directory.
+tools/tests_framework/all:
+
+.PHONY : tools/tests_framework/all
+
+# Convenience name for "clean" pass in the directory.
+tools/tests_framework/clean:
+
+.PHONY : tools/tests_framework/clean
+
+# Convenience name for "preinstall" pass in the directory.
+tools/tests_framework/preinstall:
+
+.PHONY : tools/tests_framework/preinstall
 
 #=============================================================================
 # Special targets to cleanup operation of make.

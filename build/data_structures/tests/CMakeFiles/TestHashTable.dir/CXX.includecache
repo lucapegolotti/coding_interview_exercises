@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+../tools/tests_framework/test.hpp
+iostream
+-
+string
+-
+vector
+-
+
 /Users/luca/Documents/cracking_the_coding_interview/data_structures/hash_table/hash_table.hpp
 hash_table_imp.hpp
 /Users/luca/Documents/cracking_the_coding_interview/data_structures/hash_table/hash_table_imp.hpp
@@ -19,6 +27,20 @@ iostream
 -
 string
 -
+test.hpp
+-
 ../hash_table/hash_table.hpp
 /Users/luca/Documents/cracking_the_coding_interview/data_structures/hash_table/hash_table.hpp
+
+/Users/luca/Documents/cracking_the_coding_interview/tools/tests_framework/test.cpp
+test.hpp
+/Users/luca/Documents/cracking_the_coding_interview/tools/tests_framework/test.hpp
+
+/Users/luca/Documents/cracking_the_coding_interview/tools/tests_framework/test.hpp
+iostream
+-
+string
+-
+vector
+-
 

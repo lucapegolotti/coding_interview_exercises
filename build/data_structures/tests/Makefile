@@ -140,6 +140,36 @@ TestHashTable/fast:
 	cd /Users/luca/Documents/cracking_the_coding_interview/build && $(MAKE) -f data_structures/tests/CMakeFiles/TestHashTable.dir/build.make data_structures/tests/CMakeFiles/TestHashTable.dir/build
 .PHONY : TestHashTable/fast
 
+__/__/tools/tests_framework/test.o: __/__/tools/tests_framework/test.cpp.o
+
+.PHONY : __/__/tools/tests_framework/test.o
+
+# target to build an object file
+__/__/tools/tests_framework/test.cpp.o:
+	cd /Users/luca/Documents/cracking_the_coding_interview/build && $(MAKE) -f data_structures/tests/CMakeFiles/TestLinkedList.dir/build.make data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/tests_framework/test.cpp.o
+	cd /Users/luca/Documents/cracking_the_coding_interview/build && $(MAKE) -f data_structures/tests/CMakeFiles/TestHashTable.dir/build.make data_structures/tests/CMakeFiles/TestHashTable.dir/__/__/tools/tests_framework/test.cpp.o
+.PHONY : __/__/tools/tests_framework/test.cpp.o
+
+__/__/tools/tests_framework/test.i: __/__/tools/tests_framework/test.cpp.i
+
+.PHONY : __/__/tools/tests_framework/test.i
+
+# target to preprocess a source file
+__/__/tools/tests_framework/test.cpp.i:
+	cd /Users/luca/Documents/cracking_the_coding_interview/build && $(MAKE) -f data_structures/tests/CMakeFiles/TestLinkedList.dir/build.make data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/tests_framework/test.cpp.i
+	cd /Users/luca/Documents/cracking_the_coding_interview/build && $(MAKE) -f data_structures/tests/CMakeFiles/TestHashTable.dir/build.make data_structures/tests/CMakeFiles/TestHashTable.dir/__/__/tools/tests_framework/test.cpp.i
+.PHONY : __/__/tools/tests_framework/test.cpp.i
+
+__/__/tools/tests_framework/test.s: __/__/tools/tests_framework/test.cpp.s
+
+.PHONY : __/__/tools/tests_framework/test.s
+
+# target to generate assembly for a file
+__/__/tools/tests_framework/test.cpp.s:
+	cd /Users/luca/Documents/cracking_the_coding_interview/build && $(MAKE) -f data_structures/tests/CMakeFiles/TestLinkedList.dir/build.make data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/tests_framework/test.cpp.s
+	cd /Users/luca/Documents/cracking_the_coding_interview/build && $(MAKE) -f data_structures/tests/CMakeFiles/TestHashTable.dir/build.make data_structures/tests/CMakeFiles/TestHashTable.dir/__/__/tools/tests_framework/test.cpp.s
+.PHONY : __/__/tools/tests_framework/test.cpp.s
+
 test_hash_table.o: test_hash_table.cpp.o
 
 .PHONY : test_hash_table.o
@@ -204,6 +234,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... TestHashTable"
+	@echo "... __/__/tools/tests_framework/test.o"
+	@echo "... __/__/tools/tests_framework/test.i"
+	@echo "... __/__/tools/tests_framework/test.s"
 	@echo "... test_hash_table.o"
 	@echo "... test_hash_table.i"
 	@echo "... test_hash_table.s"

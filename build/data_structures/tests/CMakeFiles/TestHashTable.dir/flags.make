@@ -6,5 +6,5 @@ CXX_FLAGS =
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/luca/Documents/cracking_the_coding_interview/data_structures/HEADERS_DIR 
+CXX_INCLUDES = -I/Users/luca/Documents/cracking_the_coding_interview/data_structures/HEADERS_DIR -I/Users/luca/Documents/cracking_the_coding_interview/tools/tests_framework 
 

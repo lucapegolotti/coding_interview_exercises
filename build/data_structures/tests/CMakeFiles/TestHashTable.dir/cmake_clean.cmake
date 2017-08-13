@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/TestHashTable.dir/test_hash_table.cpp.o"
+  "CMakeFiles/TestHashTable.dir/__/__/tools/tests_framework/test.cpp.o"
   "TestHashTable.pdb"
   "TestHashTable"
 )

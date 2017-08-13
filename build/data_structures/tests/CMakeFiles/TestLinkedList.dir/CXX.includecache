@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+../tools/tests_framework/test.hpp
+iostream
+-
+string
+-
+vector
+-
+
 /Users/luca/Documents/cracking_the_coding_interview/data_structures/linked_list/linked_list.hpp
 linked_list_imp.hpp
 /Users/luca/Documents/cracking_the_coding_interview/data_structures/linked_list/linked_list_imp.hpp
@@ -19,6 +27,20 @@ iostream
 -
 string
 -
+test.hpp
+-
 ../linked_list/linked_list.hpp
 /Users/luca/Documents/cracking_the_coding_interview/data_structures/linked_list/linked_list.hpp
+
+/Users/luca/Documents/cracking_the_coding_interview/tools/tests_framework/test.cpp
+test.hpp
+/Users/luca/Documents/cracking_the_coding_interview/tools/tests_framework/test.hpp
+
+/Users/luca/Documents/cracking_the_coding_interview/tools/tests_framework/test.hpp
+iostream
+-
+string
+-
+vector
+-
 

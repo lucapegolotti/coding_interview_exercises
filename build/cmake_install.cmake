@@ -30,6 +30,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/Users/luca/Documents/cracking_the_coding_interview/build/data_structures/cmake_install.cmake")
+  include("/Users/luca/Documents/cracking_the_coding_interview/build/tools/cmake_install.cmake")
 
 endif()
 
