@@ -1,6 +1,8 @@
 #ifndef LINKED_LIST_HPP
 #define LINKED_LIST_HPP
 
+#include <string>
+#include <printlog.hpp>
 
 template <class Value>
 class LinkedList
@@ -14,9 +16,17 @@ class LinkedList
 public:
   LinkedList();
 
+  ~LinkedList();
+
   unsigned int getSize() const;
 
-  void add(Value newValue);
+  void insert(const Value& newValue);
+
+  bool contain(const Value& valueToFind) const;
+
+  bool contain(Value& valueToFind) const;
+
+  void print() const;
 
 private:
 

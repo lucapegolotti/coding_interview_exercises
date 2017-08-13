@@ -24,6 +24,7 @@ private:
   std::vector<void (*)(Test&)> M_subTests;
   std::string M_testName;
 
+  unsigned int M_nTests;
   unsigned int M_successes;
 };
 

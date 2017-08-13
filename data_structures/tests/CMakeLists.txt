@@ -1,5 +1,5 @@
 include_directories(${CMAKE_SOURCE_DIR}/tools/tests_framework)
-include_directories(${CMAKE_SOURCE_DIR}/printlog/printlog)
+include_directories(${CMAKE_SOURCE_DIR}/tools/printlog/)
 
 
 set(TEST_SOURCES

@@ -3,6 +3,7 @@
 Test::Test(std::string testName) :
   M_subTests(),
   M_testName(testName),
+  M_nTests(0),
   M_successes(0)
 {
 
@@ -16,30 +17,31 @@ void Test::addSubTest(void (*subTest)(Test&))
 void Test::assert(bool statement)
 {
   M_successes = statement? M_successes + 1 : M_successes;
+  M_nTests++;
 }
 
 
 void Test::run()
 {
-  // std::cout << std::endl;
-  // std::cout << "\033[1;31mRunning test" << M_testName << "\033[0m "<< std::endl;
-  // std::cout << "-------------------------" << std::endl;
 
-  std::string msg = "\nRunning test " + M_testName;
+  std::string msg = "\nRunning test " + M_testName + "\n";
   printlog(MAGENTA, msg);
-  printlog(WHITE, "-----------------------");
+  printlog(WHITE, "-----------------------\n");
 
-  unsigned int n_tests = M_subTests.size();
-  for (int i = 0; i < n_tests; i++)
+  int count = 0;
+  for (std::vector<void (*)(Test&)>::iterator it = M_subTests.begin();
+       it < M_subTests.end(); it++)
   {
-    msg = "\tTest " + std::to_string(i+1) + " ... ";
+    count++;
+    msg = "\tTest " + std::to_string(count) + " ... \n";
     printlog(BLUE, msg);
-    (*M_subTests[i])(*this);
+    (*(*it))(*this);
   }
 
-  msg = "Successful tests: " + std::to_string(M_successes) + "/" + std::to_string(n_tests);
+  msg = "Successful asserts: " + std::to_string(M_successes) + "/" +
+         std::to_string(M_nTests) + "\n";
 
-  if (M_successes == n_tests)
+  if (M_successes == M_nTests)
   {
     printlog(GREEN, msg);
   }

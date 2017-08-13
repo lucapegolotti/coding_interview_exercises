@@ -13,8 +13,22 @@ void subTest1(Test& test)
 void subTest2(Test& test)
 {
   LinkedList<int> list;
-  list.add(1);
+  list.insert(1);
   test.assert(list.getSize() == 1);
+  list.insert(2);
+  test.assert(list.getSize() == 2);
+}
+
+void subTest3(Test& test)
+{
+  LinkedList<int> list;
+  list.insert(10);
+  list.insert(2);
+  list.insert(-4);
+
+  test.assert(list.contain(2));
+  test.assert(!list.contain(-100));
+
 }
 
 
@@ -24,6 +38,7 @@ int main()
 
   test.addSubTest(*subTest1);
   test.addSubTest(*subTest2);
+  test.addSubTest(*subTest3);
 
   test.run();
 
