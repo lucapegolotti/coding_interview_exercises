@@ -28,6 +28,16 @@ void subTest3(Test& test)
   test.assert(searched == "Hello");
 }
 
+void subTest4(Test& test)
+{
+  HashTable<std::string,std::string> hash;
+
+  test.assert(hash.insert("123","Hello"));
+
+  test.assert(!hash.insert("123","Jello"));
+
+}
+
 int main()
 {
   Test test("HashTableTest");
@@ -35,6 +45,7 @@ int main()
   test.addSubTest(*subTest1);
   test.addSubTest(*subTest2);
   test.addSubTest(*subTest3);
+  test.addSubTest(*subTest4);
 
   test.run();
 

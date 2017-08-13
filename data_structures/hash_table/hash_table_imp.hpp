@@ -29,12 +29,20 @@ unsigned int HashTable<Key,Value>::getSize() const
 }
 
 template <class Key, class Value>
-void HashTable<Key,Value>::insert(const Key& keyToInsert,
+bool HashTable<Key,Value>::insert(const Key& keyToInsert,
                                   const Value& valueToInsert)
 {
   KeyValuePair keyvalue(keyToInsert, valueToInsert);
+  Value defaultValue;
+
+  if (findKey(keyToInsert, defaultValue))
+  {
+    printlog(RED, "ERROR: key was already in HashTable\n");
+    return false;
+  }
 
   M_lists[hashFunction(keyToInsert)].insert(keyvalue);
+  return true;
 }
 
 template <class Key, class Value>

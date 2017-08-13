@@ -57,7 +57,7 @@ public:
 
   unsigned int getSize() const;
 
-  void insert(const Key& keyToInsert, const Value& valueToInsert);
+  bool insert(const Key& keyToInsert, const Value& valueToInsert);
 
   bool findKey(const Key& keyToFind, Value& correspondingValue) const;
 
