@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/luca/Documents/cracking_the_coding_interview/data_structures/hash_table/hash_table.hpp
+hash_table_imp.hpp
+/Users/luca/Documents/cracking_the_coding_interview/data_structures/hash_table/hash_table_imp.hpp
+
+/Users/luca/Documents/cracking_the_coding_interview/data_structures/hash_table/hash_table_imp.hpp
+hash_table.hpp
+/Users/luca/Documents/cracking_the_coding_interview/data_structures/hash_table/hash_table.hpp
+
+/Users/luca/Documents/cracking_the_coding_interview/data_structures/tests/test_hash_table.cpp
+iostream
+-
+string
+-
+../hash_table/hash_table.hpp
+/Users/luca/Documents/cracking_the_coding_interview/data_structures/hash_table/hash_table.hpp
+

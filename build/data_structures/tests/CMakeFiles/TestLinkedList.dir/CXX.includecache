@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/luca/Documents/cracking_the_coding_interview/data_structures/linked_list/linked_list.hpp
+linked_list_imp.hpp
+/Users/luca/Documents/cracking_the_coding_interview/data_structures/linked_list/linked_list_imp.hpp
+
+/Users/luca/Documents/cracking_the_coding_interview/data_structures/linked_list/linked_list_imp.hpp
+linked_list.hpp
+/Users/luca/Documents/cracking_the_coding_interview/data_structures/linked_list/linked_list.hpp
+
+/Users/luca/Documents/cracking_the_coding_interview/data_structures/tests/test_linked_list.cpp
+iostream
+-
+string
+-
+../linked_list/linked_list.hpp
+/Users/luca/Documents/cracking_the_coding_interview/data_structures/linked_list/linked_list.hpp
+
