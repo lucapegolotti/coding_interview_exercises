@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 2.8.11)
-project (CRACKING)
+project (Coding_interview)
 set (CMAKE_CXX_STANDARD 11)
 
 add_subdirectory (data_structures)
