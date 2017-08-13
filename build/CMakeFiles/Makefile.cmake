@@ -14,8 +14,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../data_structures/CMakeLists.txt"
   "../data_structures/tests/CMakeLists.txt"
   "../data_structures/tests/test_all.sh"
-  "../tools/CMakeLists.txt"
-  "../tools/tests_framework/CMakeLists.txt"
   "/opt/local/share/cmake-3.7/Modules/CMakeCInformation.cmake"
   "/opt/local/share/cmake-3.7/Modules/CMakeCXXInformation.cmake"
   "/opt/local/share/cmake-3.7/Modules/CMakeCommonLanguageInclude.cmake"
@@ -48,8 +46,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "data_structures/CMakeFiles/CMakeDirectoryInformation.cmake"
   "data_structures/tests/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "tools/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "tools/tests_framework/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

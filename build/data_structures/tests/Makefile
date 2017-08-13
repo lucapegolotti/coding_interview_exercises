@@ -140,6 +140,36 @@ TestHashTable/fast:
 	cd /Users/luca/Documents/cracking_the_coding_interview/build && $(MAKE) -f data_structures/tests/CMakeFiles/TestHashTable.dir/build.make data_structures/tests/CMakeFiles/TestHashTable.dir/build
 .PHONY : TestHashTable/fast
 
+__/__/tools/printlog/printlog.o: __/__/tools/printlog/printlog.cpp.o
+
+.PHONY : __/__/tools/printlog/printlog.o
+
+# target to build an object file
+__/__/tools/printlog/printlog.cpp.o:
+	cd /Users/luca/Documents/cracking_the_coding_interview/build && $(MAKE) -f data_structures/tests/CMakeFiles/TestLinkedList.dir/build.make data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.o
+	cd /Users/luca/Documents/cracking_the_coding_interview/build && $(MAKE) -f data_structures/tests/CMakeFiles/TestHashTable.dir/build.make data_structures/tests/CMakeFiles/TestHashTable.dir/__/__/tools/printlog/printlog.cpp.o
+.PHONY : __/__/tools/printlog/printlog.cpp.o
+
+__/__/tools/printlog/printlog.i: __/__/tools/printlog/printlog.cpp.i
+
+.PHONY : __/__/tools/printlog/printlog.i
+
+# target to preprocess a source file
+__/__/tools/printlog/printlog.cpp.i:
+	cd /Users/luca/Documents/cracking_the_coding_interview/build && $(MAKE) -f data_structures/tests/CMakeFiles/TestLinkedList.dir/build.make data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.i
+	cd /Users/luca/Documents/cracking_the_coding_interview/build && $(MAKE) -f data_structures/tests/CMakeFiles/TestHashTable.dir/build.make data_structures/tests/CMakeFiles/TestHashTable.dir/__/__/tools/printlog/printlog.cpp.i
+.PHONY : __/__/tools/printlog/printlog.cpp.i
+
+__/__/tools/printlog/printlog.s: __/__/tools/printlog/printlog.cpp.s
+
+.PHONY : __/__/tools/printlog/printlog.s
+
+# target to generate assembly for a file
+__/__/tools/printlog/printlog.cpp.s:
+	cd /Users/luca/Documents/cracking_the_coding_interview/build && $(MAKE) -f data_structures/tests/CMakeFiles/TestLinkedList.dir/build.make data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.s
+	cd /Users/luca/Documents/cracking_the_coding_interview/build && $(MAKE) -f data_structures/tests/CMakeFiles/TestHashTable.dir/build.make data_structures/tests/CMakeFiles/TestHashTable.dir/__/__/tools/printlog/printlog.cpp.s
+.PHONY : __/__/tools/printlog/printlog.cpp.s
+
 __/__/tools/tests_framework/test.o: __/__/tools/tests_framework/test.cpp.o
 
 .PHONY : __/__/tools/tests_framework/test.o
@@ -234,6 +264,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... TestHashTable"
+	@echo "... __/__/tools/printlog/printlog.o"
+	@echo "... __/__/tools/printlog/printlog.i"
+	@echo "... __/__/tools/printlog/printlog.s"
 	@echo "... __/__/tools/tests_framework/test.o"
 	@echo "... __/__/tools/tests_framework/test.i"
 	@echo "... __/__/tools/tests_framework/test.s"

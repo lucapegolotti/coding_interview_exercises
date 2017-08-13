@@ -105,19 +105,45 @@ data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/tests_framework/
 data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/tests_framework/test.cpp.o.provides.build: data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/tests_framework/test.cpp.o
 
 
+data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.o: data_structures/tests/CMakeFiles/TestLinkedList.dir/flags.make
+data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.o: ../tools/printlog/printlog.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/luca/Documents/cracking_the_coding_interview/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.o"
+	cd /Users/luca/Documents/cracking_the_coding_interview/build/data_structures/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.o -c /Users/luca/Documents/cracking_the_coding_interview/tools/printlog/printlog.cpp
+
+data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.i"
+	cd /Users/luca/Documents/cracking_the_coding_interview/build/data_structures/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/luca/Documents/cracking_the_coding_interview/tools/printlog/printlog.cpp > CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.i
+
+data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.s"
+	cd /Users/luca/Documents/cracking_the_coding_interview/build/data_structures/tests && /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/luca/Documents/cracking_the_coding_interview/tools/printlog/printlog.cpp -o CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.s
+
+data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.o.requires:
+
+.PHONY : data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.o.requires
+
+data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.o.provides: data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.o.requires
+	$(MAKE) -f data_structures/tests/CMakeFiles/TestLinkedList.dir/build.make data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.o.provides.build
+.PHONY : data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.o.provides
+
+data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.o.provides.build: data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.o
+
+
 # Object files for target TestLinkedList
 TestLinkedList_OBJECTS = \
 "CMakeFiles/TestLinkedList.dir/test_linked_list.cpp.o" \
-"CMakeFiles/TestLinkedList.dir/__/__/tools/tests_framework/test.cpp.o"
+"CMakeFiles/TestLinkedList.dir/__/__/tools/tests_framework/test.cpp.o" \
+"CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.o"
 
 # External object files for target TestLinkedList
 TestLinkedList_EXTERNAL_OBJECTS =
 
 data_structures/tests/TestLinkedList: data_structures/tests/CMakeFiles/TestLinkedList.dir/test_linked_list.cpp.o
 data_structures/tests/TestLinkedList: data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/tests_framework/test.cpp.o
+data_structures/tests/TestLinkedList: data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.o
 data_structures/tests/TestLinkedList: data_structures/tests/CMakeFiles/TestLinkedList.dir/build.make
 data_structures/tests/TestLinkedList: data_structures/tests/CMakeFiles/TestLinkedList.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/luca/Documents/cracking_the_coding_interview/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable TestLinkedList"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/luca/Documents/cracking_the_coding_interview/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable TestLinkedList"
 	cd /Users/luca/Documents/cracking_the_coding_interview/build/data_structures/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TestLinkedList.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -127,6 +153,7 @@ data_structures/tests/CMakeFiles/TestLinkedList.dir/build: data_structures/tests
 
 data_structures/tests/CMakeFiles/TestLinkedList.dir/requires: data_structures/tests/CMakeFiles/TestLinkedList.dir/test_linked_list.cpp.o.requires
 data_structures/tests/CMakeFiles/TestLinkedList.dir/requires: data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/tests_framework/test.cpp.o.requires
+data_structures/tests/CMakeFiles/TestLinkedList.dir/requires: data_structures/tests/CMakeFiles/TestLinkedList.dir/__/__/tools/printlog/printlog.cpp.o.requires
 
 .PHONY : data_structures/tests/CMakeFiles/TestLinkedList.dir/requires
 
