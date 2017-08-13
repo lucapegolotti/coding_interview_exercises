@@ -17,6 +17,8 @@ void Test::addSubTest(void (*subTest)(Test&))
 void Test::assert(bool statement)
 {
   M_successes = statement? M_successes + 1 : M_successes;
+  if (!statement)
+    printlog(RED, "ERROR: assertion failed\n");
   M_nTests++;
 }
 

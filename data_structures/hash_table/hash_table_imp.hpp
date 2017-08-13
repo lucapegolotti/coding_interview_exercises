@@ -4,8 +4,8 @@
 #include "hash_table.hpp"
 
 template <class Key, class Value>
-HashTable<Key,Value>::HashTable() :
-  M_size(DEFAULT_HASH_SIZE)
+HashTable<Key,Value>::HashTable(const unsigned int& size) :
+  M_size(size)
 {
   M_lists.resize(M_size);
 }
@@ -15,12 +15,7 @@ HashTable<Key,Value>::~HashTable()
 {
 }
 
-template <class Key, class Value>
-HashTable<Key,Value>::HashTable(unsigned int size) :
-  M_size(size)
-{
-  M_lists.resize(M_size);
-}
+
 
 template <class Key, class Value>
 unsigned int HashTable<Key,Value>::getSize() const

@@ -49,11 +49,9 @@ class HashTable
   };
 
 public:
-  HashTable();
+  HashTable(const unsigned int& size = DEFAULT_HASH_SIZE);
 
   ~HashTable();
-
-  HashTable(unsigned int size);
 
   unsigned int getSize() const;
 
