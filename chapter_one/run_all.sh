@@ -5,3 +5,7 @@ echo ***Running all exercises of Chapter 1***
 echo ==========================================
 
 ./Ex1
+./Ex2
+./Ex3
+./Ex4
+./Ex5

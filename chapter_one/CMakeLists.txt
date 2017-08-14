@@ -9,5 +9,9 @@ ${CMAKE_SOURCE_DIR}/tools/printlog/printlog.cpp
 )
 
 add_executable(Ex1 ex1.cpp ${TEST_SOURCES})
+add_executable(Ex2 ex2.cpp ${TEST_SOURCES})
+add_executable(Ex3 ex3.cpp ${TEST_SOURCES})
+add_executable(Ex4 ex4.cpp ${TEST_SOURCES})
+add_executable(Ex5 ex5.cpp ${TEST_SOURCES})
 
 configure_file(run_all.sh ${CMAKE_CURRENT_BINARY_DIR}/run_all.sh COPYONLY)

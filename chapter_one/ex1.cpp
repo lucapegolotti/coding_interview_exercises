@@ -48,6 +48,43 @@ bool hasUniqueCharactersNoDataStructures(const std::string& input)
   return true;
 }
 
+bool hasUniqueCharactersArray(const std::string& input)
+{
+  unsigned int length = input.size();
+
+  bool check[256];
+
+  for (int i = 0; i < 256; i++)
+  {
+    check[i] = false;
+  }
+
+  for (int i = 0; i < length; i++)
+  {
+    if (check[input[i]])
+      return false;
+    check[input[i]] = true;
+  }
+  return true;
+}
+
+bool hasUniqueCharactersBitwise(const std::string& input)
+{
+  unsigned int length = input.size();
+
+  int check = 0;
+
+  for (int i = 0; i < length; i++)
+  {
+    unsigned int shift = input[i]-'a';
+    if ((check & (1 << shift)) > 0)
+      return false;
+    check |= (1 << shift);
+  }
+
+  return true;
+}
+
 void subTest1(Test& test)
 {
   test.assert(hasUniqueCharactersWithCustomHashTable("Helo"));
@@ -66,6 +103,18 @@ void subTest3(Test& test)
   test.assert(!hasUniqueCharactersNoDataStructures("Bubble"));
 }
 
+void subTest4(Test& test)
+{
+  test.assert(hasUniqueCharactersArray("Helo"));
+  test.assert(!hasUniqueCharactersArray("Bubble"));
+}
+
+void subTest5(Test& test)
+{
+  test.assert(hasUniqueCharactersBitwise("Helo"));
+  test.assert(!hasUniqueCharactersBitwise("Bubble"));
+}
+
 int main()
 {
   Test test("Ex1");
@@ -73,6 +122,8 @@ int main()
   test.addSubTest(*subTest1);
   test.addSubTest(*subTest2);
   test.addSubTest(*subTest3);
+  test.addSubTest(*subTest4);
+  test.addSubTest(*subTest5);
 
   test.run();
 
