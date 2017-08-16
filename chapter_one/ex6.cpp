@@ -222,6 +222,44 @@ Matrix rotateMatrixClockwise(Matrix& input)
   return output;
 }
 
+// in place
+void rotateMatrixClockwiseInPlace(Matrix& input)
+{
+  unsigned int nRows = input.getRows();
+  unsigned int nCols = input.getCols();
+  if (nRows != nCols)
+  {
+    printlog(RED, "ERROR in rotateMatrixClockwiseInPlace: nRows != nCols");
+  }
+
+  unsigned int maxLayer = ceil(static_cast<double>(std::min(nRows,nCols))/2.0);
+
+  for (int i = 0; i < maxLayer; i++)
+  {
+    unsigned int widthLayer = nRows - 2*i;
+    unsigned int heightLayer = nCols - 2*i;
+    if (widthLayer == 1 && heightLayer == 1) { }
+    else
+    {
+      unsigned int sizeLayer = 2*(widthLayer + heightLayer - 2);
+
+      for (int j = 0; j < sizeLayer/4;j++)
+      {
+        int aux1 = input.getElementInLayer(i,j);
+        int aux2 = input.getElementInLayer(i,j + widthLayer-1);
+        int aux3 = input.getElementInLayer(i,j + (widthLayer-1)*2);
+        int aux4 = input.getElementInLayer(i,(j + (widthLayer-1)*3) % sizeLayer);
+
+        input.getElementInLayer(i,j) = aux4;
+        input.getElementInLayer(i,j + widthLayer-1) = aux1;
+        input.getElementInLayer(i,j + (widthLayer-1)*2) = aux2;
+        input.getElementInLayer(i,(j + (widthLayer-1)*3) % sizeLayer) = aux3;
+      }
+    }
+
+  }
+}
+
 // this is not done in place, hence nRows != nCols possibly
 Matrix rotateMatrixCounterclocwise(Matrix& input)
 {
@@ -253,6 +291,44 @@ Matrix rotateMatrixCounterclocwise(Matrix& input)
 
 
   return output;
+}
+
+// in place
+void rotateMatrixCounterclockwiseInPlace(Matrix& input)
+{
+  unsigned int nRows = input.getRows();
+  unsigned int nCols = input.getCols();
+  if (nRows != nCols)
+  {
+    printlog(RED, "ERROR in rotateMatrixClockwiseInPlace: nRows != nCols");
+  }
+
+  unsigned int maxLayer = ceil(static_cast<double>(std::min(nRows,nCols))/2.0);
+
+  for (int i = 0; i < maxLayer; i++)
+  {
+    unsigned int widthLayer = nRows - 2*i;
+    unsigned int heightLayer = nCols - 2*i;
+    if (widthLayer == 1 && heightLayer == 1) { }
+    else
+    {
+      unsigned int sizeLayer = 2*(widthLayer + heightLayer - 2);
+
+      for (int j = 0; j < sizeLayer/4;j++)
+      {
+        int aux1 = input.getElementInLayer(i,j);
+        int aux2 = input.getElementInLayer(i,j + widthLayer-1);
+        int aux3 = input.getElementInLayer(i,j + (widthLayer-1)*2);
+        int aux4 = input.getElementInLayer(i,(j + (widthLayer-1)*3) % sizeLayer);
+
+        input.getElementInLayer(i,j) = aux2;
+        input.getElementInLayer(i,j + widthLayer-1) = aux3;
+        input.getElementInLayer(i,j + (widthLayer-1)*2) = aux4;
+        input.getElementInLayer(i,(j + (widthLayer-1)*3) % sizeLayer) = aux1;
+      }
+    }
+
+  }
 }
 
 // square matrix
@@ -326,6 +402,41 @@ void subTest3(Test& test)
   test.assert(output == expectedResult);
 }
 
+// square matrix
+void subTest4(Test& test)
+{
+  Matrix matrix(3,3);
+
+  Matrix expectedResult(3,3);
+  expectedResult(0,0) = 2;
+  expectedResult(0,1) = 1;
+  expectedResult(0,2) = 0;
+  expectedResult(1,0) = 3;
+  expectedResult(1,1) = 2;
+  expectedResult(1,2) = 1;
+  expectedResult(2,0) = 4;
+  expectedResult(2,1) = 3;
+  expectedResult(2,2) = 2;
+
+  matrix.fill();
+  rotateMatrixClockwiseInPlace(matrix);
+
+  test.assert(matrix == expectedResult);
+}
+
+void subTest5(Test& test)
+{
+  Matrix matrix(3,3);
+  matrix.fill();
+
+  Matrix expectedResult(matrix);
+  for (int i = 0; i < 3; i++) rotateMatrixClockwiseInPlace(expectedResult);
+
+  rotateMatrixCounterclockwiseInPlace(matrix);
+
+  test.assert(matrix == expectedResult);
+}
+
 int main()
 {
   Test test("Ex6");
@@ -333,6 +444,8 @@ int main()
   test.addSubTest(*subTest1);
   test.addSubTest(*subTest2);
   test.addSubTest(*subTest3);
+  test.addSubTest(*subTest4);
+  test.addSubTest(*subTest5);
 
   test.run();
 
