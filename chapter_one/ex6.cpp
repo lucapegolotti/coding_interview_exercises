@@ -126,8 +126,8 @@ public:
   // orientation
   int& getElementInLayer(const unsigned int& layer, const unsigned int& index)
   {
-    unsigned int widthLayer = M_nRows - 2*layer;
-    unsigned int heightLayer = M_nCols - 2*layer;
+    unsigned int widthLayer = M_nCols - 2*layer;
+    unsigned int heightLayer = M_nRows - 2*layer;
 
     if (layer > std::min(M_nRows,M_nCols)/2)
     {
@@ -172,12 +172,12 @@ public:
 
   void increaseReferenceCounting()
   {
-    *M_referenceCounting++;
+    *M_referenceCounting = *M_referenceCounting + 1;
   }
 
   void decreaseReferenceCounting()
   {
-    *M_referenceCounting--;
+    *M_referenceCounting = *M_referenceCounting - 1;
   }
 
 private:
@@ -222,6 +222,40 @@ Matrix rotateMatrixClockwise(Matrix& input)
   return output;
 }
 
+// this is not done in place, hence nRows != nCols possibly
+Matrix rotateMatrixCounterclocwise(Matrix& input)
+{
+  unsigned int nRows = input.getRows();
+  unsigned int nCols = input.getCols();
+  Matrix output(nCols,nRows);
+
+  unsigned int maxLayer = ceil(static_cast<double>(std::min(nRows,nCols))/2.0);
+
+  for (int i = 0; i < maxLayer; i++)
+  {
+    unsigned int widthLayer = nRows - 2*i;
+    unsigned int heightLayer = nCols - 2*i;
+    if (widthLayer == 1 && heightLayer == 1)
+    {
+      output.getElementInLayer(i,0) = input.getElementInLayer(i,0);
+    }
+    else
+    {
+      unsigned int sizeLayer = 2*(widthLayer + heightLayer - 2);
+
+      for (int j = 0; j < sizeLayer; j++)
+      {
+        output.getElementInLayer(i,(sizeLayer-heightLayer+1+j)%sizeLayer) = input.getElementInLayer(i,j);
+      }
+    }
+
+  }
+
+
+  return output;
+}
+
+// square matrix
 void subTest1(Test& test)
 {
   Matrix matrix(3,3);
@@ -243,11 +277,62 @@ void subTest1(Test& test)
   test.assert(output == expectedResult);
 }
 
+// rectangular matrix
+void subTest2(Test& test)
+{
+  Matrix matrix(3,4);
+
+  Matrix expectedResult(4,3);
+  expectedResult(0,0) = 2;
+  expectedResult(0,1) = 1;
+  expectedResult(0,2) = 0;
+  expectedResult(1,0) = 3;
+  expectedResult(1,1) = 2;
+  expectedResult(1,2) = 1;
+  expectedResult(2,0) = 4;
+  expectedResult(2,1) = 3;
+  expectedResult(2,2) = 2;
+  expectedResult(3,0) = 5;
+  expectedResult(3,1) = 4;
+  expectedResult(3,2) = 3;
+
+  matrix.fill();
+  Matrix output = rotateMatrixClockwise(matrix);
+
+  test.assert(output == expectedResult);
+}
+
+void subTest3(Test& test)
+{
+  Matrix matrix(3,4);
+
+  Matrix expectedResult(4,3);
+  expectedResult(0,0) = 3;
+  expectedResult(0,1) = 4;
+  expectedResult(0,2) = 5;
+  expectedResult(1,0) = 2;
+  expectedResult(1,1) = 3;
+  expectedResult(1,2) = 4;
+  expectedResult(2,0) = 1;
+  expectedResult(2,1) = 2;
+  expectedResult(2,2) = 3;
+  expectedResult(3,0) = 0;
+  expectedResult(3,1) = 1;
+  expectedResult(3,2) = 2;
+
+  matrix.fill();
+  Matrix output = rotateMatrixCounterclocwise(matrix);
+
+  test.assert(output == expectedResult);
+}
+
 int main()
 {
   Test test("Ex6");
 
   test.addSubTest(*subTest1);
+  test.addSubTest(*subTest2);
+  test.addSubTest(*subTest3);
 
   test.run();
 
