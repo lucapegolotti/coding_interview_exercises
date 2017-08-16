@@ -32,7 +32,7 @@ void LinkedList<Value>::insert(const Value& newValue)
 {
   Node* newNode = new Node();
   newNode->data = newValue;
-  newNode->next = nullptr;
+  newNode->next = NULL;
 
   if (M_size == 0)
   {
