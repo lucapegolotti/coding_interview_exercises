@@ -35,20 +35,27 @@ void Test::run()
        it < M_subTests.end(); it++)
   {
     count++;
-    msg = "\tTest " + std::to_string(count) + " ... \n";
-    printlog(BLUE, msg);
+    printlog(BLUE, "\tTest ");
+    printlog(BLUE, count);
+    printlog(BLUE, " ... \n");
+
     (*(*it))(*this);
   }
 
-  msg = "Successful asserts: " + std::to_string(M_successes) + "/" +
-         std::to_string(M_nTests) + "\n";
-
   if (M_successes == M_nTests)
   {
-    printlog(GREEN, msg);
+    printlog(GREEN, "Successful asserts: ");
+    printlog(GREEN, M_successes);
+    printlog(GREEN, "/");
+    printlog(GREEN, M_nTests);
+    printlog(GREEN, "\n");
   }
   else
   {
-    printlog(RED, msg);
+    printlog(RED, "Successful asserts: ");
+    printlog(RED, M_successes);
+    printlog(RED, "/");
+    printlog(RED, M_nTests);
+    printlog(RED, "\n");
   }
 }
