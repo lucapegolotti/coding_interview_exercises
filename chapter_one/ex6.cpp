@@ -373,6 +373,7 @@ void subTest2(Test& test)
   expectedResult(3,2) = 3;
 
   matrix.fill();
+
   Matrix output = rotateMatrixClockwise(matrix);
 
   test.assert(output == expectedResult);
@@ -448,6 +449,7 @@ int main()
   test.addSubTest(*subTest5);
 
   test.run();
+  printlog(YELLOW, "ATTENTION: probably a little overengineered ...\n");
 
   return 0;
 }
