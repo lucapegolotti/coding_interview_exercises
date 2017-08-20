@@ -72,7 +72,7 @@ void subTest4(Test& test)
 
 int main()
 {
-  Test test("Ex4");
+  Test test("Ex1.4");
 
   test.addSubTest(*subTest1);
   test.addSubTest(*subTest2);

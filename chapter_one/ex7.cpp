@@ -190,7 +190,7 @@ void subTest3(Test& test)
 
 int main()
 {
-  Test test("Ex7");
+  Test test("Ex1.7");
 
   test.addSubTest(*subTest1);
   test.addSubTest(*subTest2);

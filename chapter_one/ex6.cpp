@@ -440,7 +440,7 @@ void subTest5(Test& test)
 
 int main()
 {
-  Test test("Ex6");
+  Test test("Ex1.6");
 
   test.addSubTest(*subTest1);
   test.addSubTest(*subTest2);
