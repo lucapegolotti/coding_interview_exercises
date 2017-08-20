@@ -15,5 +15,6 @@ add_executable(Ex4 ex4.cpp ${TEST_SOURCES})
 add_executable(Ex5 ex5.cpp ${TEST_SOURCES})
 add_executable(Ex6 ex6.cpp ${TEST_SOURCES})
 add_executable(Ex7 ex7.cpp ${TEST_SOURCES})
+add_executable(Ex8 ex8.cpp ${TEST_SOURCES})
 
 configure_file(run_all.sh ${CMAKE_CURRENT_BINARY_DIR}/run_all.sh COPYONLY)
