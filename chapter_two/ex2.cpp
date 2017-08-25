@@ -60,10 +60,15 @@ public:
 
   Value findNthToLast(const unsigned int& n) const
   {
+    if (n <= 0)
+    {
+      printlog(RED, "ERROR in findNthToLast: n must be strictly positive");
+      exit(1);
+    }
     Node* curr = M_head;
     Node* aux = M_head;
 
-    unsigned int N = n;
+    unsigned int N = n-1;
 
     while (N > 0)
     {
@@ -104,8 +109,8 @@ void subTest1(Test& test)
   list.addNode(5);
   list.addNode(7);
 
-  test.assert(list.findNthToLast(0) == 7);
-  test.assert(list.findNthToLast(1) == 5);
+  test.assert(list.findNthToLast(1) == 7);
+  test.assert(list.findNthToLast(2) == 5);
 
 }
 
