@@ -7,3 +7,4 @@ echo ==========================================
 ./TestLinkedList
 ./TestHashTable
 ./TestArrayList
+./TestStack
